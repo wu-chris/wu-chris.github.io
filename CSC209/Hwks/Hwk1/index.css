@@ -1,0 +1,30 @@
+body {
+    background-image: url('background.jpg');
+}
+h3 {text-align: center;}
+table, th, td {
+    border: 1px solid black;
+  }
+  a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
