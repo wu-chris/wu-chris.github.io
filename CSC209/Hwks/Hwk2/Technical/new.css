@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  body{
+    background-image: url("../Images/trainnew.jpg");
+  }
+  .menu {
+    float: left;
+    width: 18%;
+    text-align: center;
+    opacity: 80%;
+    background-color: bisque;
+  }
+  
+  .menu a {
+    background-color: rgb(248, 212, 168);
+    padding: 8px;
+    margin-top: 7px;
+    display: block;
+    width: 100%;
+    color: black;
+  }
+  #default { display: block; }
+  .main {
+    margin-top: 7px;
+    float: left;
+    width: 58%;
+    padding: 0 20px;
+    margin-left:1%;
+    height:300px;
+    background-color: rgb(208, 178, 144);
+
+  } 
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+.menu a:hover{
+    background-color: #f2cd54;
+    color: white;
+}
+  
+.right {
+    background-color: #88c7e9;
+    float: right;
+    width: 21%;
+    padding: 15px;
+    margin-top: 7px;
+    margin-left:1.5%;
+    opacity: 80%;
+    text-align: center;
+}
+h1{
+    background-color:#d0b45a;
+    height: 70px;
+    padding:15px;
+    text-align:center;
+}
+  @media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    .menu, .main, .right {
+      width: 100%;
+    }
+  }
+  

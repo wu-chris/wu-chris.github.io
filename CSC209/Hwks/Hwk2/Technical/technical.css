@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  body{
+    background-image: url("../Images/train.jpg");
+  }
+  .menu {
+    float: left;
+    width: 18%;
+    text-align: center;
+    opacity: 80%;
+  }
+  
+  .menu a {
+    background-color: #e5e5e5;
+    padding: 8px;
+    margin-top: 7px;
+    display: block;
+    width: 100%;
+    color: black;
+  }
+  #default { display: block; }
+  .main {
+    margin-top: 7px;
+    float: left;
+    width: 58%;
+    padding: 0 20px;
+    margin-left:1%;
+    height:300px;
+    background-color: rgb(203, 223, 236);
+    opacity: 70%;
+  } 
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .main#img {
+    opacity: 100%;
+}
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+.menu a:hover{
+        background-color: #5daada;
+        color: white;
+}
+  
+.right {
+    background-color: #e5e5e5;
+    float: right;
+    width: 21%;
+    padding: 15px;
+    margin-top: 7px;
+    margin-left:1.5%;
+    opacity: 80%;
+    text-align: center;
+}
+h1{
+    background-color:#8abcdb;
+    height: 70px;
+    padding:15px;
+    text-align:center;
+}
+  @media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    .menu, .main, .right {
+      width: 100%;
+    }
+  }
+  
