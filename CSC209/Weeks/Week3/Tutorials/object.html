@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Object Properties</h1>
+<h2>Access a Property with .</h2>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<script>
+const person = {
+  firstname: "John",
+  lastname: "Doe",
+  age: 50,
+  eyecolor: "blue",
+  fullName: function() {
+    return this.firstname + " " + this.lastname;
+  }
+};
+let x = "lastname";
+let y = "age";
+let text = "";
+for (let z in person) {
+  text += person[z] + " ";
+};
+document.getElementById("demo1").innerHTML = person.firstname + " is " + person.age + " years old." + person[x] + " is " + person[y] + " years old.";
+document.getElementById("demo2").innerHTML = person.fullName();
+document.getElementById("demo3").innerHTML = person.fullName;
+document.getElementById("demo4").innerHTML = text;
+</script>
+
+</body>
+</html>
