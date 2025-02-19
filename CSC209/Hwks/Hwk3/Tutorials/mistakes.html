@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <a href="index.html"> <button>Back</button></a>   
+
+<body>
+
+<h2>Common JavaScript Mistakes</h2>
+
+<p>In strict comparison, data type does matter. This if statement returns false:</p>
+
+<p id="demo"></p>
+<p>It is a common mistake to forget that switch statements use strict comparison.</p>
+<p id="demo1"></p>
+
+<script>
+let x = 10;
+let y = "10";
+document.getElementById("demo").innerHTML = Boolean(x === y);
+switch(x) {
+  case 10: document.getElementById("demo1").innerHTML = "Hello";
+}
+</script>
+
+</body>
+</html>

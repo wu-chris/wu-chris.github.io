@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <a href="index.html"> <button>Back</button></a>   
+
+<body>
+<h1>JavaScript Objects</h1>
+
+<p id="demo"></p>
+
+<script>
+// Create an Object
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+};
+
+// Add a Method
+person.name = function() {
+  return (this.firstName + " " + this.lastName).toUpperCase();
+};
+
+// Display Object Data
+document.getElementById("demo").innerHTML =
+"My father is " + person.name(); 
+</script>
+
+</body>
+</html>

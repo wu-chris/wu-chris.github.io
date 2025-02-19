@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <a href="index.html"> <button>Back</button></a>   
+
+<body>
+
+<h1>JavaScript Strings</h1>
+<h2>The search() Method and Template</h2>
+
+<p>The search() method returns the position of the first occurrence of a string in a string.</p>
+<p>The position of the first occurrence of "locate" is:</p>
+<p id="demo"></p>
+
+<script>
+let text = "Let us locate where 'locate' occurs Hahahaha!";
+let index = text.search("locate");
+document.getElementById("demo").innerHTML = index; 
+</script>
+
+<p id="demo1"></p>
+
+<p>Templates are not supported in Internet Explorer.</p>
+
+<script>
+let text1 =
+
+`What is
+going on
+my pants
+was bite by a dog`;
+
+document.getElementById("demo1").innerHTML = text1;
+</script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<link id="stylesheet" rel="stylesheet" href="css/technical.css">
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="js/slide.js"></script>
+</head>
+<body style="font-family:Verdana;">
+<div>
+  <h1>Murder on the Orient Express</h1>
+</div>
+<button onclick="toggleStylesheet()">Switch Stylesheet</button>
+<button onclick="playMusic()">Play Music</button>
+<iframe id="ytplayer" width="0" height="0" style="display: none;" frameborder="0" allow="autoplay"></iframe>
+<div style="overflow:auto">
+  <div class="menu">
+    <a href="https://www.imdb.com/title/tt3402236/">Movie(2017)</a>
+    <a href="https://www.imdb.com/title/tt0071877/">Movie(1974)</a>
+    <a href="https://www.sparknotes.com/lit/orientexpress/summary/">Book Summary</a>
+    <a href="https://www.coursehero.com/lit/Murder-on-the-Orient-Express/character-map/">Overview of Characters</a>
+    <a href="https://www.youtube.com/watch?v=oRh_4MQlfOI">Video of Plot Explanation</a>
+    <a href="#" onclick="showSection('C13')">Slides</a>
+    <hr size="10">
+    <summary><strong>Details About Important Characters</strong></summary>
+    <a href="#" onclick="showSection('C1')">Hercule Poirot</a>
+    <a href="#" onclick="showSection('C2')">Mr. Ratchett</a>
+    <a href="#" onclick="showSection('C3')">Mr. and Mrs. Andrenyi</a>
+    <a href="#" onclick="showSection('C4')">Colonel Arbuthnot</a>
+    <a href="#" onclick="showSection('C5')">Mary Debenham</a>
+    <a href="#" onclick="showSection('C6')">Princess Dragomiroff</a>
+    <a href="#" onclick="showSection('C7')">Antonio Foscanelli</a>
+    <a href="#" onclick="showSection('C8')">Cyrus Hardman</a>
+    <a href="#" onclick="showSection('C9')">Mrs. Hubbard</a>
+    <a href="#" onclick="showSection('C10')">Hector McQueen</a>
+    <a href="#" onclick="showSection('C11')">Daisy Armstrong</a>
+    <a href="#" onclick="showSection('C12')">M. Bouc</a>
+  </div>
+  <div class="main" id="table" display="unset">
+    <p style="text-align:center;" ><b>Characters For Background Plot</b></p>
+    <table>
+        <tr>
+          <th>Passenger on Board</th>
+          <th>Important Feature</th>
+          <th>Analysis of Them</th>
+        </tr>
+        <tr>
+          <td>M. Bouc</td>
+          <td>Police force with Poirot</td>
+          <td><a href="https://www.sparknotes.com/lit/orientexpress/character/m-bouc/">M. Bouc</a></td>
+        </tr>
+        <tr>
+          <td>Hercule Poirot</td>
+          <td>Detective and a retired Belgian police officer</td>
+          <td><a href="https://www.sparknotes.com/lit/orientexpress/character/hercule-poirot/">Hercule Poirot</a></td>
+        </tr>
+        <tr>
+            <td>Ratchett</td>
+            <td>Kidnapped and murdered the Daisy Armstrong for money</td>
+            <td><a href="https://www.sparknotes.com/lit/orientexpress/character/ratchett/">Ratchett</a></td>
+        </tr>
+        <tr>
+            <td>Daisy Armstrong</td>
+            <td>Innocent victim of Ratchett</td>
+            <td><a href="https://www.sparknotes.com/lit/orientexpress/character/daisy-armstrong/">Daisy Armstrong</a></td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+      <br>
+      <img src="../Images/murder.jpg" alt="Important Characters" style="width:800px;height:500px" id="img">
+  </div>
+
+  <div class="main" id="C1" style="display:none">
+    <h2>Hercule Poirot</h2>
+    <p>A retired Belgian police officer. Poirot is Christie's most famous detective and is known for his short stature and long, curly moustache. Poirot is very intelligent, extremely aware and instinctual and is a brilliant detective. The novel is generally written from his perspective.    </p>
+  </div>
+  <div class="main" id="C2" style="display:none">
+    <h2>Mr. Ratchett(Victim)</h2>
+    <p>Mr. Ratchett is an older man in his sixties traveling with Mr. MacQueen, whom Poirot first encounters at a hotel in Istanbul. Ratchett immediately gives off a sinister impression to Poirot, to the extent that when Ratchett appeals to the detective to investigate a possible attempt on his life, Poirot refuses to take on the case. Over the course of the novel, Poirot determines that Mr. Ratchett is actually Cassetti, an American criminal who was nearly convicted of the murder of Daisy Armstrong but escaped punishment using bribery. The twelve passengers on the Orient Express, who were each connected to Daisy or the Armstrong family in some way, collectively murder Ratchett on the train. Ratchett’s guilt is never in doubt, and he’s an evil enough person that Poirot suggests an alternate explanation for his murder so the twelve passengers can escape punishment for murdering him. </p>
+  </div>
+  <div class="main" id="C3" style="display:none">
+    <h2>Mr. and Mrs. Andrenyi</h2>
+    <p> <b>Countess Andrenyi</b><br>
+        The sister of Sonia Armstrong, did not murder Ratchett. Because the Countess is closest to the Armstrong case, she attempts to conceal her identity by dropping grease on her passport and smudging the name label on her luggage. The Countess is quite young, dark haired and beautiful.<br>
+        <br>
+        <b>Count Andrenyi</b><br>
+        A very defensive man who tries to conceal the true identity of his wife, Countess Andrenyi. The Count takes his wife's place in the murder.</p>
+  </div>
+  <div class="main" id="C4" style="display:none">
+    <h2>Colonel Arbuthnot</h2>
+    <p>A friend of Colonel Armstrong, and father of Daisy Armstrong. Like Mary Debenham, Poirot suspects him because he called Mary by her first name on the train to Stamboul. Colonel Arbuthnot is hard-willed, polite and very "English."</p>
+  </div>
+  <div class="main" id="C5" style="display:none">
+    <h2>Mary Debenham</h2>
+    <p>Daisy Armstrong's governess. Mary Debenham is a calm, cool and unruffled lady, instrumental in the planning of Ratchett's murder. Poirot is most suspicious of Mary because of conversation he overhears between herself and Colonel Arbuthnot on the train to Stamboul.    </p>
+  </div>
+  <div class="main" id="C6" style="display:none">
+    <h2>Princess Dragomiroff</h2>
+    <p>A Russian princess. Princess Dragomiroff is a generally despicable, ugly old lady; her yellow, toad-like face puts off Poirot. She is the owner of the famous "H" handkerchief found in Ratchett's room and tells Poirot many lies about the other passenger's identities.    </p>
+  </div>
+  <div class="main" id="C7" style="display:none">
+    <h2>Antonio Foscanelli</h2>
+    <p>M. Bouc is sure that Antonio, a big menacing Italian man, had something to do with the murders, primarily because M. Bouc distrusts Italians. Revealed by Poirot, Antonio was the Armstrong's chauffer. Antonio loved dear little Daisy and tears when he speaks of her.    </p>
+  </div>
+  <div class="main" id="C8" style="display:none">
+    <h2>Cyrus Hardman</h2>
+    <p>The big flamboyant American. Cyrus is a detective with a well-known detective service in New York City. He becomes involved with the Armstrongs because he was in love with Daisy's French nurse who committed suicide after Daisy was killed. Cyrus pretends to help Poirot with the case.    </p>
+  </div>
+  <div class="main" id="C9" style="display:none">
+    <h2>Mrs. Hubbard</h2>
+    <p>Really Linda Arden, famous actress and grandmother of Daisy Armstrong. Mrs. Hubbard provides constant interruption and diversion on the train and is known for her stories about her daughter. Mrs. Hubbard's compartment is next to Ratchett's.    </p>
+  </div>
+  <div class="main" id="C10" style="display:none">
+    <h2>Hector McQueen</h2>
+    <p>Ratchett's personal secretary. Hector is truly in cahoots with the Armstrong family. McQueen tries to hard to tell Poirot that Ratchett did not speak any French—making him an immediate suspect in the case.    </p>
+  </div>
+  <div class="main" id="C11" style="display:none">
+    <h2>Daisy Armstrong</h2>
+    <p>An innocent three-year-old girl who Ratchett kidnaps and subsequently murders. The heart of her family, Daisy’s death has a major impact on everyone who knew and loved her. Her death, which occurs before the novel begins, serves as the driving force behind the crime that unfolds on the Orient Express.    </p>
+  </div>
+  <div class="main" id="C12" style="display:none">
+    <h2>M. Bouc</h2>
+    <p>The director of the Compagnie Wagon Lits and formerly worked for the Belgian police force with Poirot. Traveling on the Orient Express, M. Bouc asks Poirot to take the case. M. Bouc provides comic relief in the novel, constantly frustrated with the case and confused by Poirot.</p>
+  </div>
+  <div class="right">
+    <h2>Synopsis</h2>
+    <button type="button" id="toggleButton" onclick="myFunction()">ReadMe</button>
+    <p id="synopsis" style="display:none;">Having sorted a matter out in the Middle East, detective Hercule Poirot is returning to England aboard the Orient Express. During the journey, Poirot encounters his friend Bianchi, a director of the Compagnie Internationale des Wagons-Lits, which owns the line. The train is unusually crowded for the time of year: every first-class berth has been booked. Shortly after the train's departure from Istanbul, a wealthy American businessman, Ratchett, tries to secure Poirot's services for $15,000 since he has received many death threats, but Poirot finds the case of little interest and turns it down. That night the train is caught in heavy snows in the Balkans. The next morning Ratchett is found stabbed to death in his cabin. Poirot and Bianchi work together to solve the case. They enlist the help of Dr. Constantine, a Greek medical doctor who was travelling in another coach with Bianchi as the only other passenger and thus not a suspect. Pierre Michel, the middle-aged French conductor of the car, also assists the investigation, as well as being a suspect. Poirot soon discovers that Ratchett was not who he claimed to be. The victim's secret past indicates a clear motive for murder, even justification, but who was the killer?</p>
+  </div>
+  <div class="main" id="C13" style="display:none">
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 5</div>
+        <img src="../Images/img1.jpg" style="width:100%">
+        <div class="text">Snow Mountain</div>
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 5</div>
+        <img src="../Images/img2.jpg" style="width:100%">
+        <div class="text">Star in the sky</div>
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 5</div>
+        <img src="../Images/img3.jpg" style="width:100%">
+        <div class="text">Forest</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="../Images/img4.jpg" style="width:100%">
+        <div class="text">Children Window Shopping</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="../Images/img5.jpg" style="width:100%">
+        <div class="text">Fall Mountain</div>
+      </div>
+    
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span>
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    <script>
+      showSlides();
+    </script>
+  </div>
+</div>
+
+
+
+<div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;">© copyright www.vanityfair.com www.sparknotes.com</div>
+
+</body>
+</html>
+
