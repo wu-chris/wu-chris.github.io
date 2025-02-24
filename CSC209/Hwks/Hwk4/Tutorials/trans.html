@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>HTML5 Canvas rotate()</h1>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid grey">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+
+ctx.translate(95, 50);
+ctx.rotate((Math.PI / 180) * 20);
+ctx.translate(-95, -50); 
+
+ctx.beginPath();
+ctx.arc(95, 50, 40, 0, 2 * Math.PI, true);
+ctx.fillStyle = "green";
+ctx.fill();
+
+ctx.strokeStyle = "blue";
+ctx.strokeRect(70, 30, 100, 50);
+</script>
+
+</body>
+</html>

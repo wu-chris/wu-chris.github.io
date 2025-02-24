@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML5 Canvas Draw Image</h1>
+
+<div style="display:none;">
+<img id="scream" width="220" height="277" src="../Images/2.png">
+</div>
+
+<canvas id="myCanvas" width="240" height="297" style="border:1px solid grey;">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+const image = document.getElementById("scream");
+
+image.addEventListener("load", (e) => {
+  ctx.drawImage(image, 90, 130, 50, 60, 10, 10, 150, 160);
+});
+</script>
+
+</body>
+</html>

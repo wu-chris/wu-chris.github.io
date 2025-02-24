@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>globalCompositeOperation = "lighter"</h1>
+
+<p>The "lighter" value will result in a brighter color where both shapes overlap.</p>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid grey">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+
+// Set type of compositing
+ctx.globalCompositeOperation = "lighter";
+
+// Draw two overlapping rectangles  
+ctx.fillStyle = "blue";
+ctx.fillRect(10, 10, 100, 100);
+ctx.fillStyle = "red";
+ctx.fillRect(40, 40, 100, 100);
+</script>
+
+</body>
+</html>

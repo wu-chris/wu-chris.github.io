@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to create Input Buttons.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "button");
+  x.setAttribute("value", "I am redundant");
+  document.body.appendChild(x);
+}
+</script>
+
+</body>
+</html>

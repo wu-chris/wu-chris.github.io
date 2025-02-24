@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML5 Canvas bezierCurveTo() Method</h1>
+
+<canvas id="myCanvas" width="300" height="170" style="border:1px solid #000000;">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+
+ctx.beginPath();
+ctx.moveTo(20, 20);
+ctx.bezierCurveTo(110, 150, 200, 10, 210, 140);
+ctx.stroke();
+</script>
+
+</body>
+</html>

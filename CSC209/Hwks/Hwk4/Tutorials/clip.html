@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML5 Canvas clip()</h1>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid grey;">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+
+// Create clipping path
+let r = new Path2D();
+r.rect(80,10, 45,130);
+r.rect(40,50, 120,50);
+ctx.clip(r, "evenodd");
+
+// Draw a rectangle
+ctx.fillStyle = "red";
+ctx.fillRect(0, 0, 300, 150);
+</script>
+
+</body>
+</html>
