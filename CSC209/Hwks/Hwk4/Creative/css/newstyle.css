@@ -1,0 +1,117 @@
+body {
+    background-image: url('../../Images/background.jpg');
+}
+#myContainer {
+    display: grid;
+    place-items: center; 
+    width: 450px;
+    height: 450px;
+    background-color: #f9f9a1; 
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+    position: relative; 
+}
+
+#redSq {
+    width: 60px;
+    height: 60px;
+    background-color: #ff4d4d; 
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 0px;
+    left: 0px; 
+    transition: transform 0.2s ease-in-out;
+}
+
+#blueSq {
+    width: 60px;
+    height: 60px;
+    background-color: #4d94ff; 
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 0px;
+    right: 0px; 
+    transition: transform 0.2s ease-in-out;
+}
+
+#yellowSq {
+    width: 60px;
+    height: 60px;
+    background-color: #f9e84d; 
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    bottom: 0px;
+    left: 0px; 
+    transition: transform 0.2s ease-in-out;
+}
+
+#orangeSq {
+    width: 60px;
+    height: 60px;
+    background-color: #ffb84d; 
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    bottom: 0px;
+    right: 0px; 
+    transition: transform 0.2s ease-in-out;
+}
+
+#redSq:hover, #blueSq:hover, #yellowSq:hover, #orangeSq:hover {
+    transform: scale(1.1); 
+}
+
+label {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+select, button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+select:hover, button:hover {
+    background-color: #f0f0f0;
+}
+
+#moveAllBtn {
+    background-color: #4CAF50; 
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#moveAllBtn:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+    #myContainer {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    #redSq, #blueSq, #yellowSq, #orangeSq {
+        width: 50px;
+        height: 50px;
+    }
+}
