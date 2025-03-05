@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Level 4 - Generate Random Number of Points with Vector</h1>
+
+<canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;">
+  Sorry, your browser does not support canvas.
+</canvas>
+<br>
+<button onclick="generateRandomLocations()">Generate Random Locations</button>
+<script>
+  const canvas = document.getElementById("myCanvas");
+  const ctx = canvas.getContext("2d");
+  const NRPTS = Math.floor(Math.random() * 9) + 2;
+  const numPoints = NRPTS;
+</script>
+<script src="js/level4.js"></script>
+<script>
+  generateRandomLocations();
+</script>
+</body>
+</html>

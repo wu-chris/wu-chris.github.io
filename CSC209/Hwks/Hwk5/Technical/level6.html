@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Level 6 - Moving Random Points with Vector</h1>
+
+<canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;">
+  Sorry, your browser does not support canvas.
+</canvas>
+<br>
+<button onclick="generateRandomLocations()">Generate Random Locations</button>
+<button onclick="animateMotion()">Start Moving</button>
+
+<script>
+  const canvas = document.getElementById("myCanvas");
+  const ctx = canvas.getContext("2d");
+  const speed = 2;
+  let points = [];
+  let animationRunning = false;
+  let stepCount = 0;
+  const NRPTS = Math.floor(Math.random() * 9) + 2;
+  const NRSTEPS = Math.floor(Math.random() * 80) + 20;
+</script>
+<script src="js/level6.js"></script>
+<script>generateRandomLocations();</script>
+</body>
+</html>
