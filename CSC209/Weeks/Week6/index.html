@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conway's Game of Life</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Conway's Game of Life</h1>
+    <div class="grid" id="grid"></div>
+    <div class="controls">
+      <button id="start-btn">Start</button>
+      <button id="stop-btn">Stop</button>
+      <button id="clear-btn">Clear</button>
+    </div>
+  </div>
+  <script>
+    const gridElement = document.getElementById('grid');
+    const startBtn = document.getElementById('start-btn');
+    const stopBtn = document.getElementById('stop-btn');
+    const clearBtn = document.getElementById('clear-btn');
+    const rows = 50;
+    const cols = 50;
+    let grid = createEmptyGrid(rows, cols);
+    let interval;
+    let isRunning = false;
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

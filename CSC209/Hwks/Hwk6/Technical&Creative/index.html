@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conway's Game of Life</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Conway's Game of Life</h1>
+    <table id="gameGrid"></table>
+    <div class="controls">
+      <button id="next">NEXT</button>
+      <button id="randomize">Randomize</button>
+      <button id="clear">Reset</button>
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const rows = 20;
+        const cols = 30;
+        let grid = createGrid(rows, cols);
+        let intervalId = null;
+
+        const table = document.getElementById("gameGrid");
+        setupGrid(table, grid);
+
+        // Next generation button
+        document.getElementById("next").addEventListener("click", () => {
+            grid = nextGeneration(grid);
+            updateGrid(table, grid);
+        });
+        document.getElementById("randomize").addEventListener("click", () => {
+            grid = createRandomGrid(rows, cols);
+            updateGrid(table, grid);
+        });
+
+        document.getElementById("clear").addEventListener("click", () => {
+            if (intervalId) {
+                clearInterval(intervalId);
+                intervalId = null;
+            }
+            grid = createGrid(rows, cols);
+            updateGrid(table, grid);
+            setupGrid(table, grid);
+        });
+
+        document.getElementById("start").addEventListener("click", () => {
+            if (intervalId) {
+                clearInterval(intervalId); 
+                intervalId = null;
+            } else {
+                intervalId = setInterval(() => {
+                    grid = nextGeneration(grid);
+                    updateGrid(table, grid);
+                }, 500);  
+            }
+        });
+        document.getElementById("stop").addEventListener("click", () => {
+            if (intervalId) {
+                clearInterval(intervalId);  
+                intervalId = null;
+            }
+            setupGrid(table, grid);
+        });
+      });
+    </script>
+    <script src="js/function.js"></script>
+</body>
+</html>
