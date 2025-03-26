@@ -3,7 +3,6 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="js/slide.js"></script>
 </head>
 <body style="font-family:Verdana;">
 <div>
@@ -128,9 +127,8 @@
     <button type="button" id="toggleButton" onclick="myFunction()">ReadMe</button>
     <p id="synopsis" style="display:none;">Having sorted a matter out in the Middle East, detective Hercule Poirot is returning to England aboard the Orient Express. During the journey, Poirot encounters his friend Bianchi, a director of the Compagnie Internationale des Wagons-Lits, which owns the line. The train is unusually crowded for the time of year: every first-class berth has been booked. Shortly after the train's departure from Istanbul, a wealthy American businessman, Ratchett, tries to secure Poirot's services for $15,000 since he has received many death threats, but Poirot finds the case of little interest and turns it down. That night the train is caught in heavy snows in the Balkans. The next morning Ratchett is found stabbed to death in his cabin. Poirot and Bianchi work together to solve the case. They enlist the help of Dr. Constantine, a Greek medical doctor who was travelling in another coach with Bianchi as the only other passenger and thus not a suspect. Pierre Michel, the middle-aged French conductor of the car, also assists the investigation, as well as being a suspect. Poirot soon discovers that Ratchett was not who he claimed to be. The victim's secret past indicates a clear motive for murder, even justification, but who was the killer?</p>
   </div>
-  <div class="main" id="C13" style="display:none">
+  <div class="main" id="C13" style="display:none" class="slideshow-container">
     <div class="slideshow-container">
-
       <div class="mySlides fade">
         <div class="numbertext">1 / 5</div>
         <img src="../Images/img1.jpg" style="width:100%">
@@ -158,23 +156,19 @@
         <img src="../Images/img5.jpg" style="width:100%">
         <div class="text">Fall Mountain</div>
       </div>
-    
     </div>
     <br>
     <div style="text-align:center">
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span>
-      <span class="dot"></span> 
-      <span class="dot"></span> 
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span> 
+      <span class="dot" onclick="currentSlide(5)"></span> 
     </div>
-    <script>
-      showSlides();
-    </script>
   </div>
 </div>
 
-
+<script src="js/slide.js"></script>
 
 <div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;">© copyright www.vanityfair.com www.sparknotes.com</div>
 

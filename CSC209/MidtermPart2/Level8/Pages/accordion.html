@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/accordion.css">
+</head>
+<body>
+
+<h2>Download</h2>
+<p>In this example we have added a "plus" sign to each button. When the user clicks on the button, the "plus" sign is replaced with a "minus" sign.</p>
+<button class="accordion">Download image 1</button>
+<div class="panel">
+  <a href="../Images/img1.jpg">Download</a>
+</div>
+
+<button class="accordion">Download image 2</button>
+<div class="panel">
+  <a href="../Images/img2.jpg">Download</a>
+</div>
+
+<button class="accordion">Download image 3</button>
+<div class="panel">
+  <a href="../Images/img3.jpg">Download</a>
+</div>
+
+<button class="accordion">Download image 4</button>
+<div class="panel">
+  <a href="../Images/img4.jpg">Download</a>
+</div>
+
+<button class="accordion">Download image 5</button>
+<div class="panel">
+  <a href="../Images/img5.jpg">Download</a>
+</div>
+
+<script src = "../js/accordion.js"></script>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", toggleFunction);
+}
+</script>
+</body>
+</html>

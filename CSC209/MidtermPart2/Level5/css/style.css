@@ -1,0 +1,38 @@
+#myContainer {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: rgb(239, 239, 121);
+}
+#redSq {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: red;
+    top: 0px;
+    left: 0px;
+}
+#blueSq {
+    width: 50px;
+    height: 50px;
+    top: 350px;
+    left: 350px;
+    position: absolute;
+    background-color: blue;
+}
+#yellowSq {
+    width: 50px;
+    height: 50px;
+    top: 350px;
+    left: 0px;
+    position: absolute;
+    background-color: yellow;
+}
+#orangeSq {
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 350px;
+    position: absolute;
+    background-color: orange;
+}
