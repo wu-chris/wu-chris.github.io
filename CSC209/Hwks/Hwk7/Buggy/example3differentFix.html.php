@@ -48,7 +48,7 @@ for ( $i=1; $i <= $NRWEEKS; $i++){
 
 <h1 style="color:blue;" > VERSION 3: DIFFERENT SOLUTION - NRWEEKS=  <?= $NRWEEKS ?>  </h1>
 
-<?php for ( $i=0; $i <= $NRWEEKS; $i++){ ?>
+<?php for ( $i=0; $i < $NRWEEKS; $i++){ ?>
 	<h1>Week <?= $i+1 ?> <h1>
 	<h2>Date: <?= $LISTDATES[$i] ?> </h2>
 	<h3>Topic: <?= $LISTTOPICS[$i]  ?></h3>

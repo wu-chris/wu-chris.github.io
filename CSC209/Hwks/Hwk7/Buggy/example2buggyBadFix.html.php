@@ -13,7 +13,11 @@ $LISTTOPICS= array("Installation","Html","Css","Javascript 1","","","","","","",
 // $TOPIC ="<h3>TOPIC</h3";
 
 $LISTDESCRIPTIONS=array("We install software","We make our first Html","We style pages with Css","Get started on Javascript ","","","","","","","","","");
-
+$firstNames = array("Edward", "Sarah", "Kat", "Charlie", "Luke", "Bennet");
+$lastNames = array("Johnson", "Smith", "Brown", "Ford", "Miller", "Wilson");
+$ages = array(25, 30, 22, 35, 28, 40);
+$NROWS = 6; 
+$NRCOLS = 3;
 ?>
 
 <html>
@@ -24,7 +28,7 @@ $LISTDESCRIPTIONS=array("We install software","We make our first Html","We style
 
 <!-- <?php echo "NRWEEKS=".$NRWEEKS."<br>"; ?> -->
 
-<?php for ( $i=0; $i <= $NRWEEKS; $i++){ ?>
+<?php for ( $i=0; $i < $NRWEEKS; $i++){ ?>
 <div>
 	<h1>Week <?= $i+1 ?> <h1>
 	<h2>Date: <?= $LISTDATES[$i] ?> </h2>
