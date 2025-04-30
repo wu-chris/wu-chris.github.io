@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Presentation: Meal Planner & Recipe Organizer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background-color: #fffefc;
+      color: #2d3436;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #0984e3;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    code {
+      background: #dfe6e9;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🥗 Meal Planner & Recipe Organizer</h1>
+
+  <section>
+    <h2>🔍 Project Overview</h2>
+    <p>This dynamic web app helps users plan meals, upload and manage personal recipes. Users can organize their diet by date or category. The website supports account registration, login/logout, and separate access levels for administrators.</p>
+  </section>
+  <section>
+    <h2>📌 Key Features</h2>
+    <ul>
+      <li>Register & Login system with an Admin page</li>
+      <li>PHP for login and file management</li>
+      <li>Users can upload, delete, and view recipes (text + image)</li>
+      <li>Recipes saved and read from JSON files</li>
+      <li>Dynamic content updates with Javascript</li>
+      <li>Dynamic recipe calendar using JavaScript DOM</li>
+      <li>Filter recipes by category, diet type, ingredients</li>
+      <li>Visual calendar to plan meals with Javascript Graphics</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🧪 Demos</h2>
+    
+    <h3>1. Storing User Data with <a href="https://www.w3schools.com/js/js_api_web_storage.asp">JavaScript Web Storage API</a></h3>
+    <p>This stores recipe title locally:</p>
+    <pre><code>
+      localStorage.setItem("recipeTitle", "Pasta Carbonara");
+      document.write("Saved recipe: " + localStorage.getItem("recipeTitle"));
+    </code></pre>
+    <h3>2. Frontend and backend communication with <a href="https://www.w3schools.com/js/js_api_fetch.asp">JavaScript Fetch API</a></h3>
+    <p>The Fetch API interface allows web browser to make HTTP requests to web servers.</p>
+    <pre><code>
+      async function getText(file) {
+        let myObject = await fetch(file);
+        let myText = await myObject.text();
+        myDisplay(myText);
+      }
+    </code></pre>
+
+    <h3>3. File Preview (HTML5 File API)</h3>
+    <input type="file" id="previewInput" accept="image/*" />
+    <div id="previewArea" style="margin-top:1rem;"></div>
+
+    <script>
+      document.getElementById('previewInput').addEventListener('change', function (e) {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (event) {
+            document.getElementById('previewArea').innerHTML = `<img src="${event.target.result}" alt="Preview" style="max-width: 300px;" />`;
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+    </script>
+  </section>
+</body>
+</html>
+
+

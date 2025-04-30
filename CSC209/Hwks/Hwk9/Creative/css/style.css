@@ -1,0 +1,211 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #dbeeff, #b8e2f2);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  
+  
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 16px 22px;
+  margin: 12px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: all 0.4s ease-in-out, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  border-color: #4dabf7;
+  box-shadow: 0 0 12px rgba(77, 171, 247, 0.6);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px; 
+  text-align: center;
+  font-weight: 700;
+  display: block; 
+  width: 100%; 
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background: linear-gradient(135deg, #6fb1fc, #4364f7, #6fb1fc);
+  background-size: 200% auto;
+  color: white;
+  padding: 14px 28px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.6px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transition: background-position 0.5s, transform 0.3s ease, box-shadow 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+button:hover {
+  background: linear-gradient(to right, #f7f594, #ecf07a);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 12px 22px;
+  background-color: #f44336;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cancelbtn:hover {
+  background-color: #c62828;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: scale(1.05);
+}
+
+/* Center the image and close button */
+.imgcontainer {
+  text-align: center;
+  margin: 30px 0 20px;
+  position: relative;
+}
+
+img.avatar {
+  width: 120px;
+  border-radius: 50%;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img.avatar:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 30px 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.6s ease-out;
+}
+
+span.psw {
+  float: right;
+  padding-top: 18px;
+  color: #444;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+span.psw:hover {
+  color: #4dabf7;
+}
+
+/* Modal backdrop */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.6);
+  padding-top: 60px;
+  animation: fadeInBackdrop 0.5s ease-out;
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: #ffffff;
+  margin: 5% auto;
+  border: none;
+  width: 85%;
+  max-width: 480px;
+  border-radius: 16px;
+  padding: 0;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+  animation: slideDown 0.5s ease-out;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  color: #333;
+  font-size: 28px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Animations */
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes slideDown {
+  from {opacity: 0; transform: translateY(-40px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInBackdrop {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+/* Responsive styles */
+@media screen and (max-width: 480px) {
+  .modal-content {
+    width: 92%;
+    margin: 10% auto;
+  }
+
+  span.psw {
+    display: block;
+    float: none;
+    text-align: center;
+    padding-top: 12px;
+  }
+
+  .cancelbtn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .container {
+    padding: 25px 20px;
+  }
+}

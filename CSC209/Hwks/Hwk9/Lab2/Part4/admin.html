@@ -1,0 +1,22 @@
+<html>
+<body>
+<h2>Admin Dashboard</h2>
+<div id="demo">
+  <button type="button" onclick="loadDoc()">Refresh Users</button>
+</div>
+
+<script>
+function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("demo").innerHTML =
+      '<button type="button" onclick="loadDoc()">Refresh Users</button><br><br>' +
+      this.responseText;
+  }
+  xhttp.open("GET", "php/admin.html.php");
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>

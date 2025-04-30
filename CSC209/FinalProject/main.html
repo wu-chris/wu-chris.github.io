@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Planner</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-left">
+      <button onclick="location.href='main.html'">Main Page</button>
+      <button onclick="location.href='recipe.html'">Recipes</button>
+      <button onclick="location.href='calendar.html'">Calendar</button>
+      <button onclick="location.href='profile.html'">Profile</button>
+    </div>
+    <div class="navbar-right">
+      <button onclick="location.href='login.html'">Logout</button>
+    </div>
+  </div>
+  </div>
+  <h1>🍽️ Welcome to Recipe Organizer</h1>
+  <form id="uploadForm" enctype="multipart/form-data">
+    <input type="text" id="title" placeholder="Recipe Name" required />
+    <textarea id="ingredients" rows="3" placeholder="Ingredients (comma-separated)" required></textarea>
+    <textarea id="instructions" rows="5" placeholder="Instructions"></textarea>
+
+    <label for="image">Optional: Upload an Image of the Dish</label>
+    <input type="file" id="image" accept="image/*" />
+
+    <label for="textFile">Optional: Upload a Text File as Instructions</label>
+    <input type="file" id="textFile" accept=".txt" />
+
+    <div id="previewArea"></div>
+    <button type="submit">Save Recipe</button>
+  </form>
+
+  <h2>📋 All Recipes</h2>
+  <div id="searchBar">
+    <input type="text" id="searchInput" placeholder="Search recipes by name...">
+    <button id="searchButton">Search</button>
+    <button id="resetButton">Reset</button>
+  </div>
+  <div id="recipeList"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>

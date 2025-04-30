@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+  <form onsubmit="event.preventDefault(); loginUser(username.value, password.value);">
+    <h2>🔐 Login</h2>
+    <input type="text" name="username" placeholder="Username" required />
+    <input type="password" name="password" placeholder="Password" required />
+    <button type="submit">Login</button>
+    <p>Don't have an account? <a href="register.html">Register here</a></p>
+  </form>
+  <script src="js/auth.js"></script>
+</body>
+</html>

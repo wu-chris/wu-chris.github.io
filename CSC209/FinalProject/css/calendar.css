@@ -1,0 +1,65 @@
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin: 2rem auto;
+    max-width: 1200px;
+  }
+  .day {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    min-height: 150px;
+    position: relative;
+  }
+  .day h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    color: #0984e3;
+  }
+  .add-recipe-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: #4dabf7;
+  }
+
+  .recipe-modal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+  }
+
+  .modal-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 400px;
+    max-height: 80vh;
+    overflow-y: auto;
+    text-align: left;
+  }
+
+  .modal-content h4 {
+    margin-top: 0;
+    color: #0984e3;
+  }
+
+  .recipe-item {
+    padding: 8px;
+    margin: 6px 0;
+    background: #f0f4f8;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .recipe-item:hover {
+    background: #dbeeff;
+  }

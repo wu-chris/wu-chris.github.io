@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Profile</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/profile.css" />
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-left">
+      <button onclick="location.href='main.html'">Main Page</button>
+      <button onclick="location.href='recipe.html'">Recipes</button>
+      <button onclick="location.href='calendar.html'">Calendar</button>
+      <button onclick="location.href='profile.html'">Profile</button>
+    </div>
+    <div class="navbar-right">
+        <button onclick="location.href='login.html'">Logout</button>
+    </div>
+  </div>
+
+  <div id="profileHeader">
+    <img src="" id="profilePhoto" alt="Profile Photo">
+    <h2 id="usernameDisplay">Username</h2>
+  </div>
+
+  <div class="upload-section">
+    <form id="photoForm" enctype="multipart/form-data">
+      <label for="photoUpload">Upload Profile Photo</label><br>
+      <input type="file" id="photoUpload" name="photo" accept="image/*">
+      <button type="submit">Upload</button>
+    </form>
+  </div>
+
+  <h2>Your Uploaded Recipes</h2>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search by keyword...">
+    <button onclick="searchRecipes()">Search</button>
+    <button onclick="resetSearch()">Reset</button>
+  </div>
+
+  <div id="recipeContainer"></div>
+  <script>
+    const username = localStorage.getItem("loggedInUser") || "Anonymous";
+    if (username === "Anonymous") {
+      alert("Please log in first.");
+      window.location.href = "login.html";
+    }
+
+    document.getElementById("usernameDisplay").textContent = username;
+    const profileImg = document.getElementById("profilePhoto");
+    const possibleExtensions = ["png", "jpg", "jpeg", "tif"];
+    let profileFound = false;
+
+    (async () => {
+    for (let ext of possibleExtensions) {
+        const path = `images/profiles/${username}.${ext}`;
+        try {
+        const res = await fetch(path, { method: 'HEAD' });
+        if (res.ok) {
+            profileImg.src = path;
+            profileFound = true;
+            break;
+        }
+        }
+        catch(e){
+            throw new Error("error");
+            
+        }
+    }
+
+    if (!profileFound) {
+        profileImg.src = "images/profile.png"; // fallback default image
+    }
+    })();
+  </script>
+  <script>
+    window.userOnly = true;
+  </script>
+
+  <script src="js/recipe.js"></script>
+</body>
+</html>

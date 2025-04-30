@@ -1,0 +1,74 @@
+[
+    {
+        "title": "dish1",
+        "ingredients": [
+            "salt;pepper"
+        ],
+        "instructions": "put salt and pepper together",
+        "image": ""
+    },
+    {
+        "title": "Korean Beef Bowl",
+        "ingredients": [
+            "1 pound lean ground beef\n\n5 cloves garlic",
+            "crushed\n\n1 tablespoon freshly grated ginger\n\n2 teaspoons toasted sesame oil\n\n\u00bd cup reduced-sodium soy sauce\n\n\u2153 cup light brown sugar\n\n\u00bc teaspoon crushed red pepper\n\n6 green onions",
+            "chopped",
+            "divided\n\n4 cups hot cooked brown rice\n\n1 tablespoon toasted sesame seeds"
+        ],
+        "instructions": "step 1: Gather all ingredients.\r\nstep 2: Heat a large skillet over medium-high heat. Add beef and cook, stirring and crumbling into small pieces until browned, 5 to 7 minutes. Drain excess grease.\r\nstep 3: Stir in garlic, ginger, and sesame oil and cook until fragrant, about 2 minutes.",
+        "image": ""
+    },
+    {
+        "title": "icecream",
+        "ingredients": [
+            "1"
+        ],
+        "instructions": "1",
+        "image": "images\/680930e297c30_foodiesfeed.com_bowl-of-ice-cream-with-chocolate.jpg"
+    },
+    {
+        "title": "fooddddd",
+        "ingredients": [
+            "1"
+        ],
+        "instructions": "1",
+        "image": "",
+        "user": "Anonymous"
+    },
+    {
+        "title": "bcjhsbckjea",
+        "ingredients": [
+            "cbhjc"
+        ],
+        "instructions": "c bjnw cnds",
+        "image": "",
+        "user": "Anonymous"
+    },
+    {
+        "title": "bjchbd",
+        "ingredients": [
+            "bjhevfbejq"
+        ],
+        "instructions": "vefveqv",
+        "image": "",
+        "user": "Anonymous"
+    },
+    {
+        "title": "test1",
+        "ingredients": [
+            "1"
+        ],
+        "instructions": "1",
+        "image": "",
+        "user": "Anonymous"
+    },
+    {
+        "title": "test2",
+        "ingredients": [
+            "2"
+        ],
+        "instructions": "2",
+        "image": "",
+        "user": "chris"
+    }
+]
