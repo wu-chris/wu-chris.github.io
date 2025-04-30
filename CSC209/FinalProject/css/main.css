@@ -3,7 +3,6 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #f0f4f8, #dbeeff);
   color: #2d3436;
   text-align: center;
   overflow-y: auto;
