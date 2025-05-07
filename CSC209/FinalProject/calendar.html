@@ -22,76 +22,17 @@
   <h1>📅 Meal Planning Calendar</h1>
   <div class="calendar-grid" id="calendarGrid"></div>
 
-  <!-- Modal for recipe selection -->
   <div class="recipe-modal" id="recipeModal">
     <div class="modal-content">
       <h4>Select a Recipe</h4>
       <div id="recipeList"></div>
     </div>
   </div>
+  <div id="recipeDetails" class="recipe-details-panel"></div>
+<button onclick="downloadWeekPlan()">⬇️ Download This Week's Plan</button>
 
-  <script>
-    const username = localStorage.getItem("loggedInUser") || "Anonymous";
-    if (username === "Anonymous") {
-      alert("Please log in first.");
-      window.location.href = "login.html";
-    }
-
-    const days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
-    const calendar = document.getElementById('calendarGrid');
-    const modal = document.getElementById('recipeModal');
-    const recipeList = document.getElementById('recipeList');
-    let currentTargetDay = null;
-    let userRecipes = [];
-
-    // Create the calendar
-    days.forEach(day => {
-      const div = document.createElement('div');
-      div.className = 'day';
-      div.innerHTML = `<h3>${day}</h3><div class="recipes"></div><span class="add-recipe-btn" onclick="showRecipePicker('${day}')">+ Add Recipe</span>`;
-      calendar.appendChild(div);
-    });
-
-    // Show modal to select from recipes
-    function showRecipePicker(day) {
-      currentTargetDay = day;
-      recipeList.innerHTML = "";
-
-      userRecipes.forEach(recipe => {
-        const item = document.createElement('div');
-        item.className = 'recipe-item';
-        item.textContent = recipe.title;
-        item.onclick = () => addRecipeToDay(recipe.title, currentTargetDay);
-        recipeList.appendChild(item);
-      });
-
-      modal.style.display = "flex";
-    }
-
-    // Add selected recipe to the selected day block
-    function addRecipeToDay(title, day) {
-      const target = [...document.querySelectorAll('.day')].find(d => d.querySelector('h3').textContent === day);
-      const entry = document.createElement('div');
-      entry.textContent = title;
-      target.querySelector('.recipes').appendChild(entry);
-      modal.style.display = "none";
-    }
-
-    // Hide modal on click outside
-    window.onclick = (e) => {
-      if (e.target === modal) {
-        modal.style.display = "none";
-      }
-    };
-
-    // Load user's own recipes
-    async function loadUserRecipes() {
-      const response = await fetch("output/recipes.json");
-      const all = await response.json();
-      userRecipes = all.filter(r => r.user === username);
-    }
-
-    window.onload = loadUserRecipes;
-  </script>
+  <img id="animatedImage" src="images/recipe.png" alt="Recipe Icon" style="position:absolute; top:70px; left:0px; width:70px; z-index:10;">
+  <script src="js/animate.js"></script>
+  <script src="js/calendar.js"></script>
 </body>
 </html>

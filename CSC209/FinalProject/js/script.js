@@ -5,28 +5,57 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+// function loginUser(username, password) {
+//     fetch('php/login.php', {
+//       method: 'POST',
+//       headers: { 'Content-Type': 'application/json' },
+//       body: JSON.stringify({ username, password })
+//     })
+//     .then(response => {
+//         if (!response.ok) {
+//             throw new Error(response.statusText);
+//           }
+//         return response.json();
+//     })
+//     .then(data => {
+//       alert(data.message);
+//       if (data.success) {
+//         localStorage.setItem("loggedInUser", username);
+//         window.location.href = "main.html";
+//       }
+//     })
+//     .catch(error => {
+//         throw new Error(error.message);
+//     });
+// }
 function loginUser(username, password) {
-    fetch('php/login.php', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, password })
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(response.statusText);
-          }
-        return response.json();
-    })
-    .then(data => {
+  fetch('php/login.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username, password })
+  })
+  .then(response => {
+      if (!response.ok) {
+          throw new Error(response.statusText);
+      }
+      return response.json();
+  })
+  .then(data => {
       alert(data.message);
       if (data.success) {
-        localStorage.setItem("loggedInUser", username);
-        window.location.href = "main.html";
+          localStorage.setItem("loggedInUser", username);
+          localStorage.setItem("loggedInPassword", password); 
+
+          if (username === "admin" && password === "123") {
+              window.location.href = "admin.html"; 
+          } else {
+              window.location.href = "main.html"; 
+          }
       }
-    })
-    .catch(error => {
-        throw new Error(error.message);
-    });
+  })
+  .catch(error => {
+      console.error("Login error:", error.message);
+  });
 }
 
 function registerUser(username, password) {

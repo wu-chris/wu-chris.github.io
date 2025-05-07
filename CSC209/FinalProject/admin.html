@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <button onclick="window.location.href='login.html'" style="position: absolute; top: 20px; left: 20px; padding: 10px 15px; background-color: #dfe6e9; border: none; border-radius: 6px; cursor: pointer;">
+    🔙 Back to Login
+  </button>
+  <h1>👨‍💼 Admin Dashboard</h1>
+  <p>Below is the list of all users and their passwords:</p>
+  <table id="userTable">
+    <thead>
+      <tr><th>Username</th><th>Password</th><th>Action</th></tr> 
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

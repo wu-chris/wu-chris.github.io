@@ -8,11 +8,13 @@ if (!file_exists($filename)) {
 }
 
 $users = json_decode(file_get_contents($filename), true);
+$username = $data['username'];
+$password = $data['password'];
 
-if ($users[$data['username']]&& $users[$data['username']] === $data['password']) {
+if (isset($users[$username]) && $users[$username] === $password) {
     echo json_encode(["success" => true, "message" => "Login successful."]);
-} 
-else {
+} else {
     echo json_encode(["success" => false, "message" => "Invalid username or password."]);
 }
 ?>
+

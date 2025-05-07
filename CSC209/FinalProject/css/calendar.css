@@ -63,3 +63,44 @@
   .recipe-item:hover {
     background: #dbeeff;
   }
+  .recipe-details-panel {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 600px;
+    background: #fefefe;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .calendar-recipe {
+    cursor: pointer;
+    padding: 4px;
+    margin: 2px 0;
+    border-radius: 5px;
+    background-color: #e8f0fe;
+  }
+  .calendar-recipe:hover {
+    background-color: #d0e0ff;
+  }
+  .exclude-filter {
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.95rem;
+  }
+  .remove-btn {
+    margin-left: 10px;
+    background: transparent;
+    border: none;
+    color: #d63031;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  .remove-btn:hover {
+    color: #e17055;
+  }
+  
+  
