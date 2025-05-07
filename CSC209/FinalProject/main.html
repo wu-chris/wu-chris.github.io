@@ -45,5 +45,72 @@
   <img id="animatedImage" src="images/recipe.png" alt="Recipe Icon" style="position:absolute; top:70px; left:0px; width:70px; z-index:10;">
   <script src="js/main.js"></script>
   <script src="js/animate.js"></script>
+  <script>
+    let allRecipes = [];
+    document.getElementById('image').addEventListener('change', function (e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (event) {
+          document.getElementById('previewArea').innerHTML = `<img src="${event.target.result}" alt="Preview" />`;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+    document.getElementById('textFile').addEventListener('change', function (e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (event) {
+          document.getElementById('previewArea').innerHTML += `<pre>${format(event.target.result)}</pre>`;
+        };
+        reader.readAsText(file);
+      }
+    });
+
+    document.getElementById("uploadForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+    
+      const formData = new FormData();
+      const username = localStorage.getItem("loggedInUser") || "Anonymous";
+    
+      formData.append("title", document.getElementById("title").value);
+      formData.append("ingredients", JSON.stringify(
+        document.getElementById("ingredients").value.split(",").map(s => s.trim())
+      ));
+      formData.append("instructions", document.getElementById("instructions").value);
+      formData.append("username", username);
+    
+      const image = document.getElementById("image").files[0];
+      if (image) formData.append("image", image);
+    
+      const textFile = document.getElementById("textFile").files[0];
+      if (textFile) formData.append("textFile", textFile);
+    
+      fetch("php/saveRecipe.php", {
+        method: "POST",
+        body: formData
+      })
+      .then(res => res.json())
+      .then(data => {
+        alert(data.message);
+        document.getElementById("uploadForm").reset();
+      })
+      .catch(err => {
+        console.error("Error uploading:", err);
+        alert("Upload failed.");
+      });
+    });
+    document.getElementById('searchButton').addEventListener('click', () => {
+      const keyword = document.getElementById('searchInput').value.toLowerCase();
+      const filtered = allRecipes.filter(r => r.title.toLowerCase().includes(keyword));
+      renderRecipes(filtered);
+    });
+    document.getElementById('resetButton').addEventListener('click', () => {
+      document.getElementById('searchInput').value = '';
+      renderRecipes(allRecipes);
+    });
+    window.addEventListener('DOMContentLoaded', loadRecipes);
+  </script>
 </body>
 </html>

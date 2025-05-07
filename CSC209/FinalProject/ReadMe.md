@@ -1,6 +1,4 @@
 # Final Project Documentation: Meal Planner & Recipe Organizer Web App
-
-## Contributors
 - **Chris Wu**
 
 ---
@@ -14,20 +12,21 @@ The Meal Planner & Recipe Organizer is a full-stack web application that enables
 ## Features
 
 - ✅ User registration, login, logout, and admin authentication
-- ✅ Recipe upload with image and optional text file
+- ✅ Recipe upload with optional image and text file; preview before upload
 - ✅ Recipe search with ingredient/allergen exclusion
 - ✅ Interactive calendar to assign meals by day
 - ✅ Downloadable weekly meal plan
 - ✅ Profile page to view user-specific recipe uploads
 - ✅ Admin dashboard to view/delete users
-- ✅ JavaScript graphic: animated recipe image moving diagonally across the page
+- ✅ JavaScript graphic: animated recipe icon moving across the page
 
 ---
 
 ## Instructions
 
 1. Go to `login.html` to register or log in.
-2. After logging in, go to `main.html` to upload/view recipes.
+2. After logging in, go to `main.html` to upload recipes.
+3. Use `recipe.html` to view and filter recipes.
 3. Use `calendar.html` to assign recipes to any day of the week.
 4. Use the exclusion input to filter out recipes containing allergens (e.g., “nuts”).
 5. Download your week’s plan via the button.
@@ -39,44 +38,15 @@ The Meal Planner & Recipe Organizer is a full-stack web application that enables
 
 | Requirement | Implementation |
 |-------------|----------------|
-| **Full Web App (HTML/CSS/JS/PHP)** | Implemented across multiple pages |
+| **Full Web App** | Implemented HTML/CSS/JS/PHP across pages |
 | **JSON File Storage** | `recipes.json` and `users.json` for persistent data |
 | **Coherent Theme** | Meal planning and recipe organization across all features |
-| **Users & Admin** | Login/Register with admin dashboard (`admin.html`) |
-| **User Data Management** | Users can upload and see only their recipes |
+| **Users & Admin** | Login/Register with admin login credential and dashboard (`admin.html`) |
+| **User Data Management** | Users Data all store in JSON file |
 | **Dynamic Pages** | DOM updates via JS, content fetched via PHP |
-| **Non-Hardcoded Elements** | Recipes and calendar content are generated from JSON |
-| **Self-Researched Feature** | Diagonal animated icon using `requestAnimationFrame` |
-| **Original Code** | PHP login, recipe handling, and JS filtering/calendar logic |
+| **Self-Researched Feature** | Image/Text Preview with HTML5 File API & Asynchronous Programming with JavaScript|
+| **Original Code** | PHP login, admin, moving graphics are adopted from previous homework |
 | **JavaScript Graphics** | Animated recipe icon moving across the screen |
-| **Interactive Local & Server Features** | Client-side filtering, server-side login, user deletion |
+| **Interactive Local & Server Features** | Recipe filtering, login, recipe deletion |
 
 ---
-
-## Outside Sources Used
-
-- **W3Schools JavaScript Demos**  
-  Used for `requestAnimationFrame` to animate the recipe icon
-
-- **MDN Web Docs**  
-  Referenced for `fetch()`, DOM manipulation, and form handling
-
----
-
-## Homework Referenced
-
-- **HW 4 (Recipe UI Layout):** Recipe card styling and toggling behavior
-- **HW 5 (Form/Filter):** Search and exclude feature logic
-- **HW 6 (Login System):** Session validation and login handling with PHP/JS
-- **HW 7 (JS Animation):** Used for implementing image movement
-
----
-
-## Contribution Breakdown
-
-- **Chris Wu:** Full-stack implementation, including all JavaScript modules, PHP backend logic, calendar system, user authentication, and animation integration.
-
----
-
-## File & Folder Structure
-

@@ -106,14 +106,4 @@ function downloadWeekPlan() {
   link.click();
 }
 
-window.onload = () => {
-  initCalendar();
-  const modalContent = document.querySelector(".modal-content");
-  const excludeInput = document.createElement("input");
-  excludeInput.type = "text";
-  excludeInput.placeholder = "Exclude ingredients or allergens (comma-separated)";
-  excludeInput.className = "exclude-filter";
-  excludeInput.id = "excludeIngredients";
-  excludeInput.oninput = loadAndShowRecipesForModal;
-  modalContent.insertBefore(excludeInput, modalContent.children[1]); // insert above #recipeList
-};
+
